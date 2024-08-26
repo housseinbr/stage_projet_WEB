@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Job Seeker's Portal</title>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <!-- Sign Up Form -->
+        <div class="signup">
+            <form action="connect.php" method="post">
+                <label for="chk" aria-hidden="true">Sign Up</label>
+                
+                <!-- User Type Selection -->
+                <select name="user_type" required>
+                    <option value="" disabled selected>Select Your Role</option>
+                    <option value="employer">Employer</option>
+                    <option value="admin">Admin</option>
+                    <option value="job_seeker">Job Seeker</option>
+                </select>
+                
+                <input type="text" name="username" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="cin" placeholder="National ID / CIN" required>
+                <input type="password" name="password" placeholder="Create Password" required>
+                <input type="hidden" name="action" value="signup">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- Login Form -->
+        <div class="login">
+            <form action="connect.php" method="post">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="text" name="cin" placeholder="National ID / CIN" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <a href="password_reset/forgot_password.html">Forgot your password?</a>
+                <input type="hidden" name="action" value="login">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

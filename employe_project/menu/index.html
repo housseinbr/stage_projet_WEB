@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find your job</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <input type="checkbox" id="active" />
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+        <li><a href="../principale/index.html" target="contentFrame">Home</a></li>
+        <li><a href="offers.html" target="contentFrame">List of Offers</a></li>
+        <li><a href="categories.html" target="contentFrame">List of Categories</a></li>
+        <li><a href="notes.html" target="contentFrame">List of Notes</a></li>
+        <li><a href="evaluations.html" target="contentFrame">List of Evaluations</a></li>
+        <li><a href="applications.html" target="contentFrame">Applications</a></li>
+        <li><a href="application-categories.html" target="contentFrame">Application Categories</a></li>
+        <li><a href="complaints.html" target="contentFrame">Complaints</a></li>
+        <li><a href="../account/account.php" target="contentFrame">Account</a></li>
+        <li><a href="../inscription/connect.html" target="contentFrame">Sign in or up</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <!-- Use iframe to load different pages -->
+      <iframe
+        name="contentFrame"
+        src="../principale/index.html"
+        frameborder="0"
+        style="width: 100%; height: 100vh; border: none;"
+      ></iframe>
+    </div>
+    <script>
+      document.querySelectorAll('.wrapper ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('active').checked = false;
+        });
+      });
+    </script>
+  </body>
+</html>
